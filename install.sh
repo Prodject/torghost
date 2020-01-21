@@ -1,12 +1,6 @@
-clear
-echo "******* Torghost installer ********"
-echo ""
-echo "=====> Installing tor bundle "
-sudo apt-get install tor -y -qq
-echo "=====> Installing dependencies "
-sudo pip install stem
-echo "=====> Installing TorGhost "
-sudo cp torghost /usr/bin/torghost
-sudo chmod +x /usr/bin/torghost
-echo "=====> Done "
-echo "=====> Open terminal and type 'torghost' for usage "
+echo "Torghost binary installer v3.0"
+echo "[Warning] use build.sh for compiling from source"
+echo "Downloading.."
+wget -c https://github.com/SusmithKrishnan/torghost/releases/download/v3.0/torghost_3.0_amd64.deb
+sudo dpkg -i torghost_3.0_amd64.deb
+echo "done"
